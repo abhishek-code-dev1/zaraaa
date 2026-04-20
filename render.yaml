@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mehndi-artist
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run serve
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
+    staticPublishPath: dist
